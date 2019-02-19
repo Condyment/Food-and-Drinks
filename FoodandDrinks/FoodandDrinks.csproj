@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.14.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,20 +56,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="ModelView\Commands\Com.cs" />
+    <Compile Include="ModelView\Commands\Command.cs" />
+    <Compile Include="ModelView\OnlyForCreate.cs" />
+    <Compile Include="ModelView\OnlyForLogin.cs" />
+    <Compile Include="ModelView\PasswordStuff.cs" />
+    <Compile Include="ModelView\SelectingFood.cs" />
+    <Compile Include="ModelView\SelectTime.cs" />
+    <Compile Include="ModelView\TabelComenzi.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\BaseClass.cs" />
+    <Compile Include="Model\BigControl.cs" />
+    <Compile Include="Model\ButtonWithColors.cs" />
+    <Compile Include="Model\ComandTabel.cs" />
+    <Compile Include="Model\NotfyStuff\Notfy.cs" />
+    <Compile Include="Model\NumberandFood.cs" />
+    <Compile Include="Model\ShowButton.cs" />
+    <Compile Include="Model\TheDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Model\Icon\fork.png" />
+    <Resource Include="Model\Icon\win32icon\fork.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
