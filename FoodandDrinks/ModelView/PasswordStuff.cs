@@ -8,6 +8,8 @@ using System.Windows.Controls;
 
 namespace FoodandDrinks.ModelView
 {
+//http://blog.functionalfun.net/2008/06/wpf-passwordbox-and-data-binding.html//
+
     public static class PasswordBoxAssistant
     {
         public static readonly DependencyProperty BoundPassword =
